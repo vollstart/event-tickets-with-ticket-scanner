@@ -76,6 +76,7 @@ msgstr ""
 "ingresso."
 
 #: includes/congress/class-congress-page.php:131
+#: js/congress-products.js
 msgid "Loading…"
 msgstr "Carregando…"
 
@@ -9515,6 +9516,7 @@ msgid "Order Ticket Infos"
 msgstr "Informacoes de Ingresso do Pedido"
 
 #: order_details.js:34 sasoEventtickets_PremiumFunctions.php:3773
+#: js/congress-products.js
 msgid "Tickets"
 msgstr "Ingressos"
 
@@ -10169,16 +10171,18 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: sasoEventtickets_PremiumFunctions.php:3427
+#: js/congress-products.js
 msgid "Price"
-msgstr ""
+msgstr "Preço"
 
 #: sasoEventtickets_PremiumFunctions.php:3428
 msgid "Quantity"
 msgstr ""
 
 #: sasoEventtickets_PremiumFunctions.php:3519
+#: js/congress-products.js
 msgid "Sold out"
-msgstr ""
+msgstr "Esgotado"
 
 #: sasoEventtickets_PremiumFunctions.php:3522
 #, php-format
@@ -10523,6 +10527,22 @@ msgid ""
 "payment — update the free plugin to 3.3.1 or newer."
 msgstr "O plugin gratuito instalado é antigo demais para a entrega automática de ingressos após o pagamento — atualize o plugin gratuito para 3.3.1 ou mais recente."
 
+#: js/congress-products.js
+msgid "Buy"
+msgstr "Comprar"
+
+#: js/congress-products.js
+msgid "Product"
+msgstr "Produto"
+
+#: js/congress-products.js
+msgid "Could not load the tickets overview."
+msgstr "Não foi possível carregar a visão geral dos ingressos."
+
+#: js/congress-frontend.js js/congress-products.js
+msgid "No content on this page yet."
+msgstr "Ainda não há conteúdo nesta página."
+
 #~ msgid ""
 #~ "Enable PDF ticket attachment in emails? Customers receive their tickets "
 #~ "as PDF directly in the order confirmation email."
@@ -10831,9 +10851,6 @@ msgstr "O plugin gratuito instalado é antigo demais para a entrega automática 
 
 #~ msgid "Menu"
 #~ msgstr "Menu"
-
-#~ msgid "No content on this page yet."
-#~ msgstr "Ainda não há conteúdo nesta página."
 
 #~ msgid "Used with the global \"days available after\" retention setting."
 #~ msgstr ""

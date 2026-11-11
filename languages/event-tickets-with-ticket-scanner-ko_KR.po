@@ -76,6 +76,7 @@ msgstr ""
 "없습니다."
 
 #: includes/congress/class-congress-page.php:131
+#: js/congress-products.js
 msgid "Loading…"
 msgstr "불러오는 중…"
 
@@ -9256,6 +9257,7 @@ msgid "Order Ticket Infos"
 msgstr "주문 티켓 정보"
 
 #: order_details.js:34 sasoEventtickets_PremiumFunctions.php:3773
+#: js/congress-products.js
 msgid "Tickets"
 msgstr "티켓"
 
@@ -9905,16 +9907,18 @@ msgid_plural "%d of %d tickets still available in total"
 msgstr[0] ""
 
 #: sasoEventtickets_PremiumFunctions.php:3427
+#: js/congress-products.js
 msgid "Price"
-msgstr ""
+msgstr "가격"
 
 #: sasoEventtickets_PremiumFunctions.php:3428
 msgid "Quantity"
 msgstr ""
 
 #: sasoEventtickets_PremiumFunctions.php:3519
+#: js/congress-products.js
 msgid "Sold out"
-msgstr ""
+msgstr "품절"
 
 #: sasoEventtickets_PremiumFunctions.php:3522
 #, php-format
@@ -10258,6 +10262,22 @@ msgid ""
 "payment — update the free plugin to 3.3.1 or newer."
 msgstr "설치된 무료 플러그인이 결제 후 자동 티켓 발송을 지원하기에는 너무 오래되었습니다 — 무료 플러그인을 3.3.1 이상으로 업데이트하세요."
 
+#: js/congress-products.js
+msgid "Buy"
+msgstr "구매"
+
+#: js/congress-products.js
+msgid "Product"
+msgstr "제품"
+
+#: js/congress-products.js
+msgid "Could not load the tickets overview."
+msgstr "티켓 개요를 불러올 수 없습니다."
+
+#: js/congress-frontend.js js/congress-products.js
+msgid "No content on this page yet."
+msgstr "이 페이지에는 아직 내용이 없습니다."
+
 #~ msgid ""
 #~ "Enable PDF ticket attachment in emails? Customers receive their tickets "
 #~ "as PDF directly in the order confirmation email."
@@ -10507,9 +10527,6 @@ msgstr "설치된 무료 플러그인이 결제 후 자동 티켓 발송을 지�
 
 #~ msgid "Menu"
 #~ msgstr "메뉴"
-
-#~ msgid "No content on this page yet."
-#~ msgstr "이 페이지에는 아직 내용이 없습니다."
 
 #~ msgid "Password"
 #~ msgstr "비밀번호"

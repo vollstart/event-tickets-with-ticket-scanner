@@ -78,6 +78,7 @@ msgstr ""
 "αυτό το εισιτήριο."
 
 #: includes/congress/class-congress-page.php:131
+#: js/congress-products.js
 msgid "Loading…"
 msgstr "Φόρτωση…"
 
@@ -9711,6 +9712,7 @@ msgid "Order Ticket Infos"
 msgstr "Πληροφορίες εισιτηρίου παραγγελίας"
 
 #: order_details.js:34 sasoEventtickets_PremiumFunctions.php:3773
+#: js/congress-products.js
 msgid "Tickets"
 msgstr "Εισιτήρια"
 
@@ -10377,16 +10379,18 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: sasoEventtickets_PremiumFunctions.php:3427
+#: js/congress-products.js
 msgid "Price"
-msgstr ""
+msgstr "Τιμή"
 
 #: sasoEventtickets_PremiumFunctions.php:3428
 msgid "Quantity"
 msgstr ""
 
 #: sasoEventtickets_PremiumFunctions.php:3519
+#: js/congress-products.js
 msgid "Sold out"
-msgstr ""
+msgstr "Εξαντλήθηκε"
 
 #: sasoEventtickets_PremiumFunctions.php:3522
 #, php-format
@@ -10731,6 +10735,22 @@ msgid ""
 "payment — update the free plugin to 3.3.1 or newer."
 msgstr "Το εγκατεστημένο δωρεάν πρόσθετο είναι πολύ παλιό για την αυτόματη παράδοση εισιτηρίων μετά την πληρωμή — ενημερώστε το δωρεάν πρόσθετο στην έκδοση 3.3.1 ή νεότερη."
 
+#: js/congress-products.js
+msgid "Buy"
+msgstr "Αγορά"
+
+#: js/congress-products.js
+msgid "Product"
+msgstr "Προϊόν"
+
+#: js/congress-products.js
+msgid "Could not load the tickets overview."
+msgstr "Δεν ήταν δυνατή η φόρτωση της επισκόπησης των εισιτηρίων."
+
+#: js/congress-frontend.js js/congress-products.js
+msgid "No content on this page yet."
+msgstr "Δεν υπάρχει ακόμη περιεχόμενο σε αυτή τη σελίδα."
+
 #~ msgid ""
 #~ "Enable PDF ticket attachment in emails? Customers receive their tickets "
 #~ "as PDF directly in the order confirmation email."
@@ -11003,9 +11023,6 @@ msgstr "Το εγκατεστημένο δωρεάν πρόσθετο είναι
 
 #~ msgid "Menu"
 #~ msgstr "Μενού"
-
-#~ msgid "No content on this page yet."
-#~ msgstr "Δεν υπάρχει ακόμη περιεχόμενο σε αυτή τη σελίδα."
 
 #~ msgid "Password"
 #~ msgstr "Κωδικός πρόσβασης"

@@ -77,6 +77,7 @@ msgstr ""
 "Доступ запрещён. Неверный билет или к этому билету не привязан конгресс."
 
 #: includes/congress/class-congress-page.php:131
+#: js/congress-products.js
 msgid "Loading…"
 msgstr "Загрузка…"
 
@@ -9478,6 +9479,7 @@ msgid "Order Ticket Infos"
 msgstr "Информация о билете заказа"
 
 #: order_details.js:34 sasoEventtickets_PremiumFunctions.php:3773
+#: js/congress-products.js
 msgid "Tickets"
 msgstr "Билеты"
 
@@ -10135,16 +10137,18 @@ msgstr[1] ""
 msgstr[2] ""
 
 #: sasoEventtickets_PremiumFunctions.php:3427
+#: js/congress-products.js
 msgid "Price"
-msgstr ""
+msgstr "Цена"
 
 #: sasoEventtickets_PremiumFunctions.php:3428
 msgid "Quantity"
 msgstr ""
 
 #: sasoEventtickets_PremiumFunctions.php:3519
+#: js/congress-products.js
 msgid "Sold out"
-msgstr ""
+msgstr "Продано"
 
 #: sasoEventtickets_PremiumFunctions.php:3522
 #, php-format
@@ -10490,6 +10494,22 @@ msgid ""
 "payment — update the free plugin to 3.3.1 or newer."
 msgstr "Установленный бесплатный плагин слишком стар для автоматической отправки билетов после оплаты — обновите бесплатный плагин до версии 3.3.1 или новее."
 
+#: js/congress-products.js
+msgid "Buy"
+msgstr "Купить"
+
+#: js/congress-products.js
+msgid "Product"
+msgstr "Товар"
+
+#: js/congress-products.js
+msgid "Could not load the tickets overview."
+msgstr "Не удалось загрузить обзор билетов."
+
+#: js/congress-frontend.js js/congress-products.js
+msgid "No content on this page yet."
+msgstr "На этой странице пока нет содержимого."
+
 #~ msgid ""
 #~ "Enable PDF ticket attachment in emails? Customers receive their tickets "
 #~ "as PDF directly in the order confirmation email."
@@ -10750,9 +10770,6 @@ msgstr "Установленный бесплатный плагин слишк�
 
 #~ msgid "Menu"
 #~ msgstr "Меню"
-
-#~ msgid "No content on this page yet."
-#~ msgstr "На этой странице пока нет содержимого."
 
 #~ msgid "Password"
 #~ msgstr "Пароль"

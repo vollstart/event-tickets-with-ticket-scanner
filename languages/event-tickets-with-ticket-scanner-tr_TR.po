@@ -75,6 +75,7 @@ msgid "Access denied. Invalid ticket or no congress assigned to this ticket."
 msgstr "Erişim reddedildi. Geçersiz bilet veya bu bilete atanmış kongre yok."
 
 #: includes/congress/class-congress-page.php:131
+#: js/congress-products.js
 msgid "Loading…"
 msgstr "Yükleniyor…"
 
@@ -9436,6 +9437,7 @@ msgid "Order Ticket Infos"
 msgstr "Sipariş Bilgi Bilgileri"
 
 #: order_details.js:34 sasoEventtickets_PremiumFunctions.php:3773
+#: js/congress-products.js
 msgid "Tickets"
 msgstr "Biletler"
 
@@ -10093,16 +10095,18 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: sasoEventtickets_PremiumFunctions.php:3427
+#: js/congress-products.js
 msgid "Price"
-msgstr ""
+msgstr "Fiyat"
 
 #: sasoEventtickets_PremiumFunctions.php:3428
 msgid "Quantity"
 msgstr ""
 
 #: sasoEventtickets_PremiumFunctions.php:3519
+#: js/congress-products.js
 msgid "Sold out"
-msgstr ""
+msgstr "Tükendi"
 
 #: sasoEventtickets_PremiumFunctions.php:3522
 #, php-format
@@ -10447,6 +10451,22 @@ msgid ""
 "payment — update the free plugin to 3.3.1 or newer."
 msgstr "Yüklü ücretsiz eklenti, ödeme sonrası otomatik bilet teslimi için çok eski — ücretsiz eklentiyi 3.3.1 veya daha yeni bir sürüme güncelleyin."
 
+#: js/congress-products.js
+msgid "Buy"
+msgstr "Satın Al"
+
+#: js/congress-products.js
+msgid "Product"
+msgstr "Ürün"
+
+#: js/congress-products.js
+msgid "Could not load the tickets overview."
+msgstr "Bilet genel bakışı yüklenemedi."
+
+#: js/congress-frontend.js js/congress-products.js
+msgid "No content on this page yet."
+msgstr "Bu sayfada henüz içerik yok."
+
 #~ msgid ""
 #~ "Enable PDF ticket attachment in emails? Customers receive their tickets "
 #~ "as PDF directly in the order confirmation email."
@@ -10710,9 +10730,6 @@ msgstr "Yüklü ücretsiz eklenti, ödeme sonrası otomatik bilet teslimi için 
 
 #~ msgid "Menu"
 #~ msgstr "Menü"
-
-#~ msgid "No content on this page yet."
-#~ msgstr "Bu sayfada henüz içerik yok."
 
 #~ msgid "Password"
 #~ msgstr "Şifre"

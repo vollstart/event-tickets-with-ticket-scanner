@@ -76,6 +76,7 @@ msgid "Access denied. Invalid ticket or no congress assigned to this ticket."
 msgstr "Acces refuzat. Bilet invalid sau niciun congres asociat acestui bilet."
 
 #: includes/congress/class-congress-page.php:131
+#: js/congress-products.js
 msgid "Loading…"
 msgstr "Se încarcă…"
 
@@ -9599,6 +9600,7 @@ msgid "Order Ticket Infos"
 msgstr "Informații bilet comandă"
 
 #: order_details.js:34 sasoEventtickets_PremiumFunctions.php:3773
+#: js/congress-products.js
 msgid "Tickets"
 msgstr "Bilete"
 
@@ -10261,16 +10263,18 @@ msgstr[1] ""
 msgstr[2] ""
 
 #: sasoEventtickets_PremiumFunctions.php:3427
+#: js/congress-products.js
 msgid "Price"
-msgstr ""
+msgstr "Preț"
 
 #: sasoEventtickets_PremiumFunctions.php:3428
 msgid "Quantity"
 msgstr ""
 
 #: sasoEventtickets_PremiumFunctions.php:3519
+#: js/congress-products.js
 msgid "Sold out"
-msgstr ""
+msgstr "Epuizat"
 
 #: sasoEventtickets_PremiumFunctions.php:3522
 #, php-format
@@ -10616,6 +10620,22 @@ msgid ""
 "payment — update the free plugin to 3.3.1 or newer."
 msgstr "Modulul gratuit instalat este prea vechi pentru livrarea automată a biletelor după plată — actualizați modulul gratuit la versiunea 3.3.1 sau mai nouă."
 
+#: js/congress-products.js
+msgid "Buy"
+msgstr "Cumpără"
+
+#: js/congress-products.js
+msgid "Product"
+msgstr "Produs"
+
+#: js/congress-products.js
+msgid "Could not load the tickets overview."
+msgstr "Nu s-a putut încărca prezentarea generală a biletelor."
+
+#: js/congress-frontend.js js/congress-products.js
+msgid "No content on this page yet."
+msgstr "Nu există încă conținut pe această pagină."
+
 #~ msgid ""
 #~ "Enable PDF ticket attachment in emails? Customers receive their tickets "
 #~ "as PDF directly in the order confirmation email."
@@ -10883,9 +10903,6 @@ msgstr "Modulul gratuit instalat este prea vechi pentru livrarea automată a bil
 
 #~ msgid "Menu"
 #~ msgstr "Meniu"
-
-#~ msgid "No content on this page yet."
-#~ msgstr "Nu există încă conținut pe această pagină."
 
 #~ msgid "Password"
 #~ msgstr "Parolă"

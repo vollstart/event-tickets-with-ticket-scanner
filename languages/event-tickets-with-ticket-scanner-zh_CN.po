@@ -73,6 +73,7 @@ msgid "Access denied. Invalid ticket or no congress assigned to this ticket."
 msgstr "访问被拒绝。门票无效或该门票未分配任何大会。"
 
 #: includes/congress/class-congress-page.php:131
+#: js/congress-products.js
 msgid "Loading…"
 msgstr "加载中…"
 
@@ -8930,6 +8931,7 @@ msgid "Order Ticket Infos"
 msgstr "订单门票信息"
 
 #: order_details.js:34 sasoEventtickets_PremiumFunctions.php:3773
+#: js/congress-products.js
 msgid "Tickets"
 msgstr "门票"
 
@@ -9567,16 +9569,18 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: sasoEventtickets_PremiumFunctions.php:3427
+#: js/congress-products.js
 msgid "Price"
-msgstr ""
+msgstr "价格"
 
 #: sasoEventtickets_PremiumFunctions.php:3428
 msgid "Quantity"
 msgstr ""
 
 #: sasoEventtickets_PremiumFunctions.php:3519
+#: js/congress-products.js
 msgid "Sold out"
-msgstr ""
+msgstr "已售罄"
 
 #: sasoEventtickets_PremiumFunctions.php:3522
 #, php-format
@@ -9921,6 +9925,22 @@ msgid ""
 "payment — update the free plugin to 3.3.1 or newer."
 msgstr "已安装的免费插件版本过旧,无法在付款后自动发送票券——请将免费插件更新至 3.3.1 或更新版本。"
 
+#: js/congress-products.js
+msgid "Buy"
+msgstr "购买"
+
+#: js/congress-products.js
+msgid "Product"
+msgstr "产品"
+
+#: js/congress-products.js
+msgid "Could not load the tickets overview."
+msgstr "无法加载票务概览。"
+
+#: js/congress-frontend.js js/congress-products.js
+msgid "No content on this page yet."
+msgstr "此页面尚无内容。"
+
 #~ msgid ""
 #~ "Enable PDF ticket attachment in emails? Customers receive their tickets "
 #~ "as PDF directly in the order confirmation email."
@@ -10203,9 +10223,6 @@ msgstr "已安装的免费插件版本过旧,无法在付款后自动发送票�
 
 #~ msgid "Menu"
 #~ msgstr "菜单"
-
-#~ msgid "No content on this page yet."
-#~ msgstr "此页面尚无内容。"
 
 #~ msgid "Used with the global \"days available after\" retention setting."
 #~ msgstr "与全局“结束后可用天数”保留设置配合使用。"

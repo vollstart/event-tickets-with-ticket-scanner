@@ -3,7 +3,7 @@
  * Plugin Name: Event Tickets with Ticket Scanner
  * Plugin URI: https://vollstart.com/event-tickets-with-ticket-scanner/docs/
  * Description: You can create and generate tickets and codes. You can redeem the tickets at entrance using the built-in ticket scanner. You customer can download a PDF with the ticket information. The Premium allows you also to activate user registration and more. This allows your user to register them self to a ticket.
- * Version: 3.3.4
+ * Version: 3.3.5
  * Author: Vollstart
  * Author URI: https://vollstart.com
  * Requires at least: 6.0
@@ -18,6 +18,8 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  */
+if (!defined('ABSPATH')) exit;
+
 // https://semver.org/
 // https://developer.wordpress.org/plugins/security/securing-output/
 // https://developer.wordpress.org/plugins/security/securing-input/
@@ -25,7 +27,7 @@
 include_once(plugin_dir_path(__FILE__)."init_file.php");
 
 if (!defined('SASO_EVENTTICKETS_PLUGIN_VERSION'))
-	define('SASO_EVENTTICKETS_PLUGIN_VERSION', '3.3.4');
+	define('SASO_EVENTTICKETS_PLUGIN_VERSION', '3.3.5');
 if (!defined('SASO_EVENTTICKETS_PLUGIN_DIR_PATH'))
 	define('SASO_EVENTTICKETS_PLUGIN_DIR_PATH', plugin_dir_path(__FILE__));
 
@@ -878,9 +880,9 @@ class sasoEventtickets {
 		if (empty($walletLinks)) return;
 
 		if ($plain_text) {
-			echo "\n" . __('Add to Vollstart Wallet', 'event-tickets-with-ticket-scanner') . ":\n";
+			echo "\n" . esc_html__('Add to Vollstart Wallet', 'event-tickets-with-ticket-scanner') . ":\n";
 			foreach ($walletLinks as $url) {
-				echo $url . "\n";
+				echo esc_url_raw($url) . "\n";
 			}
 		} else {
 			echo '<p><b>' . esc_html__('Add to Vollstart Wallet', 'event-tickets-with-ticket-scanner') . '</b></p>';
@@ -1194,7 +1196,7 @@ class sasoEventtickets {
 		$allowed = $this->isUserAllowedToAccessAdminArea();
 		$allowed = apply_filters( $this->_add_filter_prefix.'main_options_page', $allowed );
 		if ( !$allowed )  {
-			wp_die( __( 'You do not have sufficient permissions to access this page.', 'event-tickets-with-ticket-scanner' ) );
+			wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'event-tickets-with-ticket-scanner' ) );
 		}
 
 		wp_enqueue_style("wp-jquery-ui-dialog");
@@ -1284,7 +1286,7 @@ class sasoEventtickets {
 		<div class="event-tickets-with-ticket-scanner-admin-page">
 			<div class="event-tickets-with-ticket-scanner-header">
 				<div class="event-tickets-with-ticket-scanner-header-left">
-					<img src="<?php echo plugins_url( "",__FILE__ ); ?>/img/logo_event-tickets-with-ticket-scanner.gif"
+					<img src="<?php echo esc_url( plugins_url( "",__FILE__ ) ); ?>/img/logo_event-tickets-with-ticket-scanner.gif"
 						alt="Event Tickets"
 						class="event-tickets-with-ticket-scanner-header-logo">
 
@@ -1293,7 +1295,7 @@ class sasoEventtickets {
 							Event Tickets with Ticket Scanner
 						</div>
 						<div class="event-tickets-with-ticket-scanner-header-meta">
-							<?php esc_html_e('Version', 'event-tickets-with-ticket-scanner'); ?>: <?php echo $versions_tail; ?> <?php echo $version_tail_add; ?>
+							<?php esc_html_e('Version', 'event-tickets-with-ticket-scanner'); ?>: <?php echo esc_html($versions_tail); ?> <?php echo esc_html($version_tail_add); ?>
 						</div>
 					</div>
 				</div>
@@ -1462,16 +1464,16 @@ class sasoEventtickets {
 					<a href="https://vollstart.com/event-tickets-with-ticket-scanner/docs/#filters" target="_blank"><?php esc_html_e('Click here for more help about the functions', 'event-tickets-with-ticket-scanner'); ?></a>
 					</p>
 					<ul>
-						<li>add_filter('<?php echo $this->_add_filter_prefix.'beforeCheckCodePre'; ?>', 'myfunc', 20, 1)</li>
-						<li>add_filter('<?php echo $this->_add_filter_prefix.'beforeCheckCode'; ?>', 'myfunc', 20, 1)</li>
-						<li>add_filter('<?php echo $this->_add_filter_prefix.'afterCheckCodePre'; ?>', 'myfunc', 20, 1)</li>
-						<li>add_filter('<?php echo $this->_add_filter_prefix.'afterCheckCode'; ?>', 'myfunc', 20, 1)</li>
+						<li>add_filter('<?php echo esc_html($this->_add_filter_prefix.'beforeCheckCodePre'); ?>', 'myfunc', 20, 1)</li>
+						<li>add_filter('<?php echo esc_html($this->_add_filter_prefix.'beforeCheckCode'); ?>', 'myfunc', 20, 1)</li>
+						<li>add_filter('<?php echo esc_html($this->_add_filter_prefix.'afterCheckCodePre'); ?>', 'myfunc', 20, 1)</li>
+						<li>add_filter('<?php echo esc_html($this->_add_filter_prefix.'afterCheckCode'); ?>', 'myfunc', 20, 1)</li>
 					</ul>
 
 					<h3><?php esc_html_e('For plugin developers: show your checkout fields on the ticket', 'event-tickets-with-ticket-scanner'); ?></h3>
 					<p><?php esc_html_e('Does your plugin add fields to the checkout or to the order? Register them here and they are listed where our users write their ticket template, so nobody has to look up a meta key in the database. The values themselves need nothing from us - a ticket template reads any order meta with ORDER.get_meta("your_key").', 'event-tickets-with-ticket-scanner'); ?></p>
 					<ul>
-						<li>add_filter('<?php echo $this->_add_filter_prefix.'template_order_fields'; ?>', 'myfunc', 20, 1)</li>
+						<li>add_filter('<?php echo esc_html($this->_add_filter_prefix.'template_order_fields'); ?>', 'myfunc', 20, 1)</li>
 					</ul>
 					<p><?php esc_html_e('Your function receives an array and returns it with your fields added. Two keys per field are enough:', 'event-tickets-with-ticket-scanner'); ?></p>
 					<ul>
@@ -1479,7 +1481,7 @@ class sasoEventtickets {
 						<li><code>name</code> — <?php esc_html_e('what the field is called for the shop owner', 'event-tickets-with-ticket-scanner'); ?></li>
 					</ul>
 					<p><?php esc_html_e('The heading above your fields is the name of your plugin - we take it from the plugin the callback lives in, you do not have to send it. Want a different heading? Then use your own, once as the array key:', 'event-tickets-with-ticket-scanner'); ?></p>
-					<pre style="background:#f6f7f7;border:1px solid #dcdcde;padding:10px;overflow:auto;">add_filter('<?php echo $this->_add_filter_prefix.'template_order_fields'; ?>', function($fields) {
+					<pre style="background:#f6f7f7;border:1px solid #dcdcde;padding:10px;overflow:auto;">add_filter('<?php echo esc_html($this->_add_filter_prefix.'template_order_fields'); ?>', function($fields) {
     $fields['Booking questions'] = [
         ['key' => '_arrival_day', 'name' => 'Arrival day'],
         ['key' => '_meal_choice', 'name' => 'Meal choice'],
@@ -1645,8 +1647,11 @@ class sasoEventtickets {
 		wp_add_inline_script('saso_et_scanner_offline', 'window.ticketScannerOfflineStrings = '.wp_json_encode([
 			'connected' => __('Connected', 'event-tickets-with-ticket-scanner'),
 			'offlineHint' => __('Offline — scans are validated locally and queued', 'event-tickets-with-ticket-scanner'),
+			/* translators: %s: number of preloaded tickets */
 			'preloaded' => __('Preloaded tickets: %s', 'event-tickets-with-ticket-scanner'),
+			/* translators: %s: number of tickets waiting for sync */
 			'waiting' => __('Waiting for sync: %s', 'event-tickets-with-ticket-scanner'),
+			/* translators: %s: number of conflicts after the last sync */
 			'conflicts' => __('Conflicts after last sync: %s', 'event-tickets-with-ticket-scanner'),
 			'syncNow' => __('Sync now', 'event-tickets-with-ticket-scanner'),
 			'scannerTitle' => __('Offline scanner', 'event-tickets-with-ticket-scanner'),
@@ -1886,7 +1891,7 @@ class sasoEventtickets {
 				sprintf(
 					/* translators: %d: maximum number of tickets */
 					esc_html__('Too many tickets. Maximum %d tickets can be downloaded at once.', 'event-tickets-with-ticket-scanner'),
-					$max_tickets
+					(int) $max_tickets
 				),
 				400
 			);
@@ -2364,6 +2369,7 @@ class sasoEventtickets {
 				$taxRate = isset($p['resolved_tax_rate_percent']) ? floatval($p['resolved_tax_rate_percent']) : (isset($p['tax_rate']) ? floatval($p['tax_rate']) : 0.0);
 				if ($taxRate > 0) {
 					$taxLabel = rtrim(rtrim(number_format($taxRate, 1, '.', ''), '0'), '.');
+					/* translators: %s: tax rate percentage */
 					$ret .= '<span class="et-shop-catalog__prod-tax">'.esc_html(sprintf(__('incl. %s %% VAT', 'event-tickets-with-ticket-scanner'), $taxLabel)).'</span>';
 				}
 				// type badge (3.3.0 Slice C): products/optional fees are
@@ -2601,7 +2607,7 @@ class sasoEventtickets {
 				printf(
 					/* translators: %1$d: days remaining in grace period, %2$s: renewal URL */
 					esc_html__('Your Premium subscription has expired. You have %1$d days remaining before features are disabled. %2$sReactivate now%3$s', 'event-tickets-with-ticket-scanner'),
-					ceil($grace_left),
+					(int) ceil($grace_left),
 					'<a href="' . esc_url($renewal_url) . '" target="_blank">',
 					'</a>'
 				);
@@ -2667,7 +2673,7 @@ class sasoEventtickets {
 		printf(
 			/* translators: %d: number of missed features */
 			esc_html__("You're missing %d new premium features!", 'event-tickets-with-ticket-scanner'),
-			$total
+			(int) $total
 		);
 		echo '</strong></p>';
 		echo '<ul style="list-style:disc;margin-left:20px;">';
@@ -2675,14 +2681,15 @@ class sasoEventtickets {
 			echo '<li>' . esc_html($feat) . '</li>';
 		}
 		if ($total > 5) {
-			printf('<li><em>' . esc_html__('...and %d more', 'event-tickets-with-ticket-scanner') . '</em></li>', $total - 5);
+			/* translators: %d: number of additional features not listed */
+			printf('<li><em>' . esc_html__('...and %d more', 'event-tickets-with-ticket-scanner') . '</em></li>', (int) ($total - 5));
 		}
 		echo '</ul>';
 		echo '<p><a href="' . esc_url($renewal_url) . '" target="_blank" class="button button-primary" style="background:#9333ea;border-color:#7c22d0;">';
 		esc_html_e('Renew now', 'event-tickets-with-ticket-scanner');
 		echo '</a></p>';
 		echo '</div>';
-		echo '<script>jQuery(function($){$("#saso-et-fomo-banner").on("click",".notice-dismiss",function(){$.post(ajaxurl,{action:"saso_et_dismiss_fomo",_wpnonce:"' . $nonce . '"});});});</script>';
+		echo '<script>jQuery(function($){$("#saso-et-fomo-banner").on("click",".notice-dismiss",function(){$.post(ajaxurl,{action:"saso_et_dismiss_fomo",_wpnonce:"' . esc_js($nonce) . '"});});});</script>';
 	}
 
 	/**
@@ -2745,6 +2752,7 @@ class sasoEventtickets {
 			}
 		} else {
 			printf(
+				/* translators: %s: installed Premium plugin version */
 				esc_html__('Event Tickets: Your Premium plugin (v%s) is outdated and not compatible with this version.', 'event-tickets-with-ticket-scanner'),
 				esc_html($old_version)
 			);
@@ -2829,6 +2837,7 @@ class sasoEventtickets {
 			echo '</p>';
 			echo '<p style="margin:0 0 8px 0;">';
 			printf(
+				/* translators: %s: installed Premium plugin version */
 				esc_html__('Required version: 1.6.0 or higher. You have: %s', 'event-tickets-with-ticket-scanner'),
 				'<strong>' . esc_html($old_version) . '</strong>'
 			);
@@ -2864,6 +2873,7 @@ class sasoEventtickets {
 		$downgrade_url = 'https://plugins.trac.wordpress.org/browser/event-tickets-with-ticket-scanner/tags';
 		echo '<p style="margin:6px 0 0 0;font-style:italic;color:#666;font-size:13px;">';
 		printf(
+			/* translators: 1: link opener, 2: link closer */
 			esc_html__('Alternatively, your old Premium plugin still works with basic plugin versions below 2.8.0. You can %1$sdowngrade the basic plugin here%2$s.', 'event-tickets-with-ticket-scanner'),
 			'<a href="' . esc_url($downgrade_url) . '" target="_blank">',
 			'</a>'
@@ -2982,8 +2992,8 @@ class sasoEventtickets {
 						printf(
 							/* translators: 1: list name, 2: attempts, 3: clear URL */
 							esc_html__('⚠️ CRITICAL: Ticket format for "%1$s" is exhausted! It took %2$d attempts to generate a code. Future ticket sales may fail. %3$sEdit list%4$s | %5$sDismiss%4$s', 'event-tickets-with-ticket-scanner'),
-							$list_name,
-							$attempts,
+							wp_kses_post($list_name),
+							(int) $attempts,
 							'<a href="' . esc_url(admin_url('admin.php?page=event-tickets-with-ticket-scanner')) . '">',
 							'</a>',
 							'<a href="' . esc_url($clear_url) . '">'
@@ -3000,8 +3010,8 @@ class sasoEventtickets {
 						printf(
 							/* translators: 1: list name, 2: attempts, 3: clear URL */
 							esc_html__('⚠️ WARNING: Ticket format for "%1$s" is running out of combinations. It took %2$d attempts to generate a code. Consider increasing code length. %3$sEdit list%4$s | %5$sDismiss%4$s', 'event-tickets-with-ticket-scanner'),
-							$list_name,
-							$attempts,
+							wp_kses_post($list_name),
+							(int) $attempts,
 							'<a href="' . esc_url(admin_url('admin.php?page=event-tickets-with-ticket-scanner')) . '">',
 							'</a>',
 							'<a href="' . esc_url($clear_url) . '">'

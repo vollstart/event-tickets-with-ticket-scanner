@@ -3,7 +3,7 @@ Contributors: sasonikolov
 Tags: event tickets, ticket scanner, box office, pos, seating plan, woocommerce tickets, congress, membership
 Requires at least: 6.0
 Requires PHP: 8.1
-Stable tag: 3.3.4
+Stable tag: 3.3.5
 Tested up to: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -248,6 +248,11 @@ Major release: Old premium version will no longer work with this version. Intera
 Old premium version will no longer work with this version. You need to downgrade the basic plugin or get a new license for premium to update your premium plugin too.
 
 == Changelog ==
+
+= 3.3.5 =
+* Shop template engine moved to the premium plugin (1.10.0+) — designable shop templates (catalog, event page, order mails) are now a premium feature; the built-in rendering stays the default
+* Update note: with an older premium (< 1.10.0) the shop template fields are inactive — the shop itself (orders, payments, ticket delivery) keeps working in every combination
+* Security: hardened output escaping in admin notices, cart and checkout output, seating error messages and the seating plan export (Plugin Check hardening, phase 1)
 
 = 3.3.4 — 2026-11-10 =
 * Removed the transition safety net for premium versions older than 1.8.0 — the license state alone decides again (expired premium now switches its features off regardless of the installed premium version)

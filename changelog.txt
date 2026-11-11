@@ -1,5 +1,11 @@
 
 
+= 3.3.5 — 2026-11-11 =
+* Shop template engine moved to the premium plugin (1.10.0+) — designable shop templates (catalog, event page, order mails) are now a premium feature; the built-in rendering stays the default
+* Update note: with an older premium (< 1.10.0) the shop template fields are inactive — the shop itself (orders, payments, ticket delivery) keeps working in every combination
+* Security: hardened output escaping in admin notices, cart and checkout output, seating error messages and the seating plan export (Plugin Check hardening, phase 1)
+
+
 = 3.3.4 — 2026-11-10 =
 * Removed the transition safety net for premium versions older than 1.8.0 — the license state alone decides again (expired premium now switches its features off regardless of the installed premium version)
 * Kasse (direct sales): "Pay by QR" button on draft orders when the premium box office payment is enabled

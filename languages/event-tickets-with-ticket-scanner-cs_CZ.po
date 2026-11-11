@@ -77,6 +77,7 @@ msgstr ""
 "žádný kongres."
 
 #: includes/congress/class-congress-page.php:131
+#: js/congress-products.js
 msgid "Loading…"
 msgstr "Načítání…"
 
@@ -9437,6 +9438,7 @@ msgid "Order Ticket Infos"
 msgstr "Informace o objednávce vstupenky"
 
 #: order_details.js:34 sasoEventtickets_PremiumFunctions.php:3773
+#: js/congress-products.js
 msgid "Tickets"
 msgstr "Vstupenky"
 
@@ -10094,16 +10096,18 @@ msgstr[1] ""
 msgstr[2] ""
 
 #: sasoEventtickets_PremiumFunctions.php:3427
+#: js/congress-products.js
 msgid "Price"
-msgstr ""
+msgstr "Cena"
 
 #: sasoEventtickets_PremiumFunctions.php:3428
 msgid "Quantity"
 msgstr ""
 
 #: sasoEventtickets_PremiumFunctions.php:3519
+#: js/congress-products.js
 msgid "Sold out"
-msgstr ""
+msgstr "Vyprodáno"
 
 #: sasoEventtickets_PremiumFunctions.php:3522
 #, php-format
@@ -10449,6 +10453,22 @@ msgid ""
 "payment — update the free plugin to 3.3.1 or newer."
 msgstr "Nainstalovaný bezplatný plugin je příliš starý pro automatické doručení vstupenek po platbě — aktualizujte bezplatný plugin na verzi 3.3.1 nebo novější."
 
+#: js/congress-products.js
+msgid "Buy"
+msgstr "Koupit"
+
+#: js/congress-products.js
+msgid "Product"
+msgstr "Produkt"
+
+#: js/congress-products.js
+msgid "Could not load the tickets overview."
+msgstr "Přehled vstupenek se nepodařilo načíst."
+
+#: js/congress-frontend.js js/congress-products.js
+msgid "No content on this page yet."
+msgstr "Na této stránce zatím není žádný obsah."
+
 #~ msgid ""
 #~ "Enable PDF ticket attachment in emails? Customers receive their tickets "
 #~ "as PDF directly in the order confirmation email."
@@ -10709,9 +10729,6 @@ msgstr "Nainstalovaný bezplatný plugin je příliš starý pro automatické do
 
 #~ msgid "Menu"
 #~ msgstr "Nabídka"
-
-#~ msgid "No content on this page yet."
-#~ msgstr "Na této stránce zatím není žádný obsah."
 
 #~ msgid "Password"
 #~ msgstr "Heslo"

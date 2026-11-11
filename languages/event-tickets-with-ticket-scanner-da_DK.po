@@ -76,6 +76,7 @@ msgstr ""
 "Adgang nægtet. Ugyldig billet eller ingen kongres tildelt denne billet."
 
 #: includes/congress/class-congress-page.php:131
+#: js/congress-products.js
 msgid "Loading…"
 msgstr "Indlæser…"
 
@@ -9383,6 +9384,7 @@ msgid "Order Ticket Infos"
 msgstr "Bestil billetinformationer"
 
 #: order_details.js:34 sasoEventtickets_PremiumFunctions.php:3773
+#: js/congress-products.js
 msgid "Tickets"
 msgstr "Billetter"
 
@@ -10038,16 +10040,18 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: sasoEventtickets_PremiumFunctions.php:3427
+#: js/congress-products.js
 msgid "Price"
-msgstr ""
+msgstr "Pris"
 
 #: sasoEventtickets_PremiumFunctions.php:3428
 msgid "Quantity"
 msgstr ""
 
 #: sasoEventtickets_PremiumFunctions.php:3519
+#: js/congress-products.js
 msgid "Sold out"
-msgstr ""
+msgstr "Udsolgt"
 
 #: sasoEventtickets_PremiumFunctions.php:3522
 #, php-format
@@ -10392,6 +10396,22 @@ msgid ""
 "payment — update the free plugin to 3.3.1 or newer."
 msgstr "Den installerede gratis plugin er for gammel til automatisk levering af billetter efter betaling — opdatér den gratis plugin til 3.3.1 eller nyere."
 
+#: js/congress-products.js
+msgid "Buy"
+msgstr "Køb"
+
+#: js/congress-products.js
+msgid "Product"
+msgstr "Produkt"
+
+#: js/congress-products.js
+msgid "Could not load the tickets overview."
+msgstr "Kunne ikke indlæse billettoversigten."
+
+#: js/congress-frontend.js js/congress-products.js
+msgid "No content on this page yet."
+msgstr "Der er intet indhold på denne side endnu."
+
 #~ msgid ""
 #~ "Enable PDF ticket attachment in emails? Customers receive their tickets "
 #~ "as PDF directly in the order confirmation email."
@@ -10653,9 +10673,6 @@ msgstr "Den installerede gratis plugin er for gammel til automatisk levering af 
 
 #~ msgid "Menu"
 #~ msgstr "Menu"
-
-#~ msgid "No content on this page yet."
-#~ msgstr "Der er intet indhold på denne side endnu."
 
 #~ msgid "Password"
 #~ msgstr "Adgangskode"
